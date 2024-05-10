@@ -1,0 +1,1 @@
+const TransactionHistory = ({ item }) => {};
