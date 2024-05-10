@@ -1,9 +1,10 @@
-import userData from "../userData.json";
+import userData from "./userData.json";
+import "./App.css";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
     <>
-           {" "}
       <Profile
         name={userData.username}
         tag={userData.tag}
@@ -11,7 +12,8 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-         {" "}
     </>
   );
 };
+
+export default App;
