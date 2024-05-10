@@ -1,15 +1,15 @@
 import FriendListItem from "./FriendListItem";
 
-const FriendList = ({ friends }) => (
-  <ul>
-    {friends.map((friend, id) => {
-      return (
+const FriendList = ({ friends }) => {
+  return (
+    <ul>
+      {friends.map(({ id, ...friend }) => (
         <li key={id}>
-          <FriendListItem />
+          <FriendListItem {...friend} />
         </li>
-      );
-    })}
-  </ul>
-);
+      ))}
+    </ul>
+  );
+};
 
 export default FriendList;
